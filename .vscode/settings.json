@@ -1,0 +1,36 @@
+{
+    // 关闭微软 C/C++ 插件的 IntelliSense，避免与 clangd 冲突
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    // clangd 核心配置
+    "clangd.path": "clangd",
+    "clangd.arguments": [
+        "--completion-style=detailed",
+        "--all-scopes-completion",
+        "--limit-results=500",
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators",
+        "--enable-config",
+        "--background-index",
+        "--pch-storage=memory",
+        "-j=8",
+        "--compile-commands-dir=build"
+    ],
+    "clangd.suggestSnippets": true,
+    "clangd.completionEnableFunctionArgSnippets": true,
+    "clangd.inlayHints.enabled": "on",
+    "clangd.showInactiveRegions": true,
+    // 通用代码提示优化
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestionsDelay": 10,
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.wordBasedSuggestions": "off"
+}
