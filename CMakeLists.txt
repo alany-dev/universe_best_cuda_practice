@@ -21,3 +21,4 @@ endif()
 
 add_subdirectory(1_cuda_reduce_study)
 add_subdirectory(2_cuda_sgemm_study)
+add_subdirectory(3_softmax)
